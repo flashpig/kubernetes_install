@@ -1,0 +1,2 @@
+# kubernetes_install
+通过kubeadm安装kubernetes,使用阿里云资源
