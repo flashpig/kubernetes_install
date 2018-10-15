@@ -1,5 +1,6 @@
 # kubernetes_install
-通过kubeadm安装kubernetes,使用阿里云资源
+通过kubeadm安装kubernetes,使用阿里云资源  
+参考文章:https://www.kubernetes.org.cn/4619.html
 
 1.使用阿里云的仓库  
 
