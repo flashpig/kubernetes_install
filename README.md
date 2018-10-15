@@ -6,7 +6,8 @@
     安装docker  
     安装kubernetes组件: kubelet, kubeadm, kubectl  
 
-2.使用阿里云容器镜像服务,构建必要的镜像
+2.使用阿里云容器镜像服务,构建必要的镜像  
+
     # kubernetes
     k8s.gcr.io/kube-apiserver:v1.12.0
     k8s.gcr.io/kube-controller-manager:v1.12.0
@@ -30,8 +31,11 @@
     k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.0
     gcr.io/google_containers/metrics-server-amd64:v0.3.0
 
-3.使用docker拉取镜像到本地
+3.使用docker拉取镜像到本地  
+
     #拉取镜像
     docker pull 
     #为镜像创建标签
     docker tag 
+    
+4.配置系统,为kubeadmin init做准备  
