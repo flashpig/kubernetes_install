@@ -39,5 +39,34 @@
     docker pull 
     #为镜像创建标签
     docker tag 
+    #删除镜像
+    docker rmi
+    
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/kube-apiserver-amd64:v1.12.1
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/kube-controller-manager-amd64:v1.12.1
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/kube-scheduler-amd64:v1.12.1
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/kube-proxy-amd64:v1.12.1
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/pause-amd64:v3.1
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/etcd-amd64:v3.2.24
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/coredns:1.2.2
+    sudo docker pull registry.cn-beijing.aliyuncs.com/flashpig8014/flannel:0.10.0
+
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/kube-apiserver-amd64:v1.12.1 k8s.gcr.io/kube-apiserver:v1.12.1
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/kube-controller-manager-amd64:v1.12.1 k8s.gcr.io/kube-controller-manager:v1.12.1
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/kube-scheduler-amd64:v1.12.1 k8s.gcr.io/kube-scheduler:v1.12.1
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/kube-proxy-amd64:v1.12.1 k8s.gcr.io/kube-proxy:v1.12.1
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/pause-amd64:v3.1 k8s.gcr.io/pause:3.1
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/etcd-amd64:v3.2.24 k8s.gcr.io/etcd:3.2.24
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/coredns:1.2.2 k8s.gcr.io/coredns:1.2.2
+    sudo docker tag registry.cn-beijing.aliyuncs.com/flashpig8014/flannel:0.10.0 quay.io/coreos/flannel:v0.10.0-amd64
+
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/kube-apiserver-amd64:v1.12.1
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/kube-controller-manager-amd64:v1.12.1
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/kube-scheduler-amd64:v1.12.1
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/kube-proxy-amd64:v1.12.1
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/pause-amd64:v3.1
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/etcd-amd64:v3.2.24
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/coredns:1.2.2
+    sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/flannel:0.10.0
     
 4.配置系统,为kubeadmin init做准备  
