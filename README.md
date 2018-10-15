@@ -46,6 +46,7 @@
 
     sudo cp ./kubernetes.repo /etc/yum.repos.d/kubernetes.repo
     setenforce 0
+    yum makecache fast
     yum install -y kubelet kubeadm kubectl
     systemctl enable kubelet && systemctl start kubelet
 
@@ -111,3 +112,18 @@
     sudo docker rmi registry.cn-beijing.aliyuncs.com/flashpig8014/flannel:0.10.0
     
 4.配置系统,为kubeadmin init做准备  
+
+    swapoff -a
+    vm.swappiness=0
+    
+    /etc/hosts内容
+    192.168.122.242         master
+    192.168.122.157         node-1
+    192.168.122.16          node-2
+    
+5.初始化kubernetes  
+
+    kubeadm init \
+      --kubernetes-version=v1.12.1 \
+      --pod-network-cidr=10.244.0.0/16 \
+      --apiserver-advertise-address=192.168.122.242
