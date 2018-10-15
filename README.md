@@ -1,10 +1,10 @@
 # kubernetes_install
 通过kubeadm安装kubernetes,使用阿里云资源
 
-1.使用阿里云的仓库
-    https://opsx.alibaba.com/mirror
-    安装docker
-    安装kubernetes组件: kubelet, kubeadm, kubectl
+1.使用阿里云的仓库  
+    https://opsx.alibaba.com/mirror  
+    安装docker  
+    安装kubernetes组件: kubelet, kubeadm, kubectl  
 
 2.使用阿里云容器镜像服务,构建必要的镜像
     # kubernetes
